@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+</head>
+<body>
+
+<h1 class="text-center">Contas Bancárias</h1>
+
+<div id="mensagemView"></div>
+
+<form class="form container d-flex justify-content-center">
+
+    <div class="form-group mx-2">
+        <label for="data">Data de Criação</label>
+        <input type="date" id="data" class="form-control" required autofocus/>
+    </div>
+
+    <div class="form-group mx-2">
+        <label for="conta">Conta</label>
+        <input type="text" min="1" step="1" id="conta" class="form-control" value="1" required/>
+    </div>
+
+    <div class="form-group mx-2">
+        <label for="saldo">Saldo</label>
+        <input id="saldo" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required/>
+    </div>
+
+    <button class="btn btn-primary mt-4 mx-2" type="submit" onclick="contaController.inserir(event)">Inserir</button>
+</form>
+
+<br>
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th>DATA DE CRIAÇÃO</th>
+        <th>CONTA,</th>
+        <th>SALDO</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+
+    <tfoot>
+    </tfoot>
+</table>
+
+<script src="js/model/conta.js"></script>
+<script src="js/model/conta-bonificada.js"></script>
+<script src="js/model/poupanca.js"></script>
+<script src="js/model/contas.js"></script>
+<script src="js/controller/conta-controller.js"></script>
+<script src="js/model/cliente.js"></script>
+<script src="js/model/clientes.js"></script>
+<script src="js/app-conta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+crossorigin="anonymous"></script>
+</body>
+</html>
